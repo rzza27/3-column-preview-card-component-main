@@ -43,7 +43,7 @@ main {
 
 main > * {
   width: 20%;
-  min-height: 70%;
+  min-height: 65%;
 }
 
 .car {
