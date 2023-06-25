@@ -42,7 +42,7 @@ main {
 }
 
 main > * {
-  width: 20%;
+  width: 27rem;
   min-height: 65%;
 }
 
@@ -86,7 +86,9 @@ main > * {
 .sedans button:hover {
   background-color: var(--bright-orange);
   color: var(--transparent-white);
-  border: 3px solid var(--transparent-white);
+
+  outline: 2px solid var(--transparent-white);
+  outline-offset: -2px;
 }
 
 .suvs {
@@ -100,7 +102,8 @@ main > * {
 .suvs button:hover {
   background-color: var(--dark-cyan);
   color: var(--transparent-white);
-  border: 3px solid var(--transparent-white);
+  outline: 2px solid var(--transparent-white);
+  outline-offset: -2px;
 }
 
 .luxury {
@@ -116,7 +119,35 @@ main > * {
 .luxury button:hover {
   background-color: var(--very-dark-cyan);
   color: var(--transparent-white);
-  border: 3px solid var(--transparent-white);
+  outline: 2px solid var(--transparent-white);
+  outline-offset: -2px;
+}
+
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    height: 100%;
+    margin: 7rem auto;
+    text-align: center;
+  }
+
+  main > * {
+    width: 80%;
+  }
+
+  .sedans {
+    background-color: var(--bright-orange);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0;
+  }
+
+  .luxury {
+    background-color: var(--very-dark-cyan);
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 0;
+  }
 }
 
 @media (max-width: 375px) {
@@ -138,7 +169,6 @@ main > * {
   }
 
   .car p {
-    
     margin-bottom: 2.5rem;
   }
 
